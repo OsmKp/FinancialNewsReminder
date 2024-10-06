@@ -1,4 +1,4 @@
-# FinancialNewsReminder
+# Financial News Reminder
 ## About
 Scrapes forexfactory.com for daily financial news that might impact the market and x-rates.com for daily updates on popular currency exchange rates. Results are then emailed to me when the script is run. This process can easily be automated in various ways to send out the e-mail daily at a specified time.
 ## Example
