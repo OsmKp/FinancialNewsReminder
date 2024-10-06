@@ -2,13 +2,21 @@ import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 
+
+
+
 class Scraper:
+    
+    """
+    This class is responsible for connecting to forexfactory and getting the contents of the page.
+    
+    It uses undetected chromedriver to simulate a real human connection to the website avoiding captcha.
+    """
     
     WEBSITE = "https://www.forexfactory.com/calendar?day=today"
     
     def __init__(self) -> None:
         self.chrome_options = uc.ChromeOptions()
-        #self.chrome_options.add_argument("--start-maximized")
         self.chrome_driver = uc.Chrome(options=self.chrome_options)
         self.update_interceptor()
         

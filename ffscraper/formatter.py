@@ -1,6 +1,11 @@
 from bs4 import BeautifulSoup
 
 class Formatter:
+    """
+    This class is responsible for filtering out the relevant data for all the news events on the page and storing them in a list as dictionaries.
+    """
+    
+    
     def __init__(self, page_content) -> None:
         self.page_content = page_content
         self.soup = BeautifulSoup(self.page_content, features="lxml") #create soup

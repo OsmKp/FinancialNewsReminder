@@ -4,6 +4,10 @@ import os
 from email.message import EmailMessage
 
 class Sender:
+    """
+    This class is responsible for establishing a connection with the email servers, logging on to the sender email account and
+    sending off the email.
+    """
     def __init__(self,subject,body) -> None:
         load_dotenv()
         self.body = body

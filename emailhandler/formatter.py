@@ -3,6 +3,10 @@ from datetime import date
 
 
 class Formatter:
+    """
+    This class is responsible for taking in the scraped data and formatting them nicely into tables. It also generates the body and the subject of the email to be sent
+    using the newly formatted data.
+    """
     
     SUBJECT_START = "Daily Financial News Report - "
     BODY_FF = "News that might affect the stock market:"

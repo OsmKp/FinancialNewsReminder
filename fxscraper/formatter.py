@@ -1,6 +1,11 @@
 from bs4 import BeautifulSoup
 
 class Formatter:
+    
+    """
+    This class is responsible for filtering out the data for relevant currencies and storing them in a dictionary.
+    """
+    
     def __init__(self, page_content) -> None:
         self.page_content = page_content
         self.soup = BeautifulSoup(page_content, 'html.parser') #create soup
@@ -21,6 +26,10 @@ class Formatter:
                 self.pair_infos[pair_result[0]] = pair_result[1]
                 
     def split_pair_change(self,pair):
+        """_summary_
+
+        Receives the currency pair name and data as a single string, seperates them and returns a tuple.
+        """
         pair_name = ""
         pair_change = ""
         
